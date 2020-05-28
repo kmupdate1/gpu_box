@@ -1,0 +1,15 @@
+#!/bin/sh
+
+echo -n 'board / bcm : '
+read type
+
+echo -n '電源ボタンのピン番号 : '
+read power
+
+echo -n 'LEDのピン番号        : '
+read led
+
+echo -n 'シャットダウン時の押し方(3sec : 1, double click : 2) : '
+read click
+
+python3 power_demo.py $type $power $led $click
