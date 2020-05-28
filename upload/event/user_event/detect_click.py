@@ -69,13 +69,13 @@ class PowerHandler(object):
 			if current_time - self.__clicked_time < 3.0:
 				#sleep
 				self.__led_blink.sample("sleep     : ", current_time - self.__clicked_time)
-#				subprocess.call('suspend')
-#				exit()
+				subprocess.call('suspend')
+				exit()
 			elif current_time - self.__clicked_time < 4.0:
 				#shut down
 				self.__led_blink.sample("shut down : ", current_time - self.__clicked_time)
-#				subprocess.call('poweroff')
-#				exit()
+				subprocess.call('poweroff')
+				exit()
 			elif current_time - self.__clicked_time < 5.0:
 				pass
 			else:
