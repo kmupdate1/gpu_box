@@ -22,5 +22,5 @@ class LedBlink(object):
 	def call_back(self):
 		self.__blink()
 
-	def sample(self, message, sample):
-		print("{}{}".format(message, sample))
+	def print_result(self, message, clicked_time):
+		print("{}{}".format(message, clicked_time))

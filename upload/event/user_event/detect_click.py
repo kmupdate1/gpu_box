@@ -68,28 +68,30 @@ class PowerHandler(object):
 		if self.__is_clicked:
 			if current_time - self.__clicked_time < 3.0:
 				#sleep
-				self.__led_blink.sample("sleep     : ", current_time - self.__clicked_time)
+				self.__led_blink.print_result("sleep     : ", current_time - self.__clicked_time) ### delete this line ###
 #				subprocess.call('suspend')
 #				exit()
 			elif current_time - self.__clicked_time < 4.0:
 				#shut down
-				self.__led_blink.sample("shut down : ", current_time - self.__clicked_time)
+				self.__led_blink.print_result("shut down : ", current_time - self.__clicked_time) ### delete this line ###
 #				subprocess.call('poweroff')
 #				exit()
 			elif current_time - self.__clicked_time < 5.0:
 				pass
 			else:
 				exit()
+#				pass
 
 	def __double_click(self, current_time):
 		if self.__is_clicked:
 			if current_time - self.__clicked_time < 3.0:
 				#sleep
-				self.__led_blink.sample("sleep     : ", current_time - self.__clicked_time)
+				self.__led_blink.print_result("sleep     : ", current_time - self.__clicked_time) ### delete this line ###
 			elif current_time - self.__clicked_time < 4.0:
 				#shut down
-				self.__led_blink.sample("shut down : ", current_time - self.__clicked_time)
+				self.__led_blink.print_result("shut down : ", current_time - self.__clicked_time) ### delete this line ###
 #			elif :
 #				pass
 			else:
 				exit()
+#				pass
