@@ -3,22 +3,19 @@ import time
 import Jetson.GPIO as GPIO
 
 
-class SystemPoweroff(object):
-	"""docstring for SystemPoweroff"""
+class PoweroffSystem(object):
 	def __init__(self, arg):
-		super(SystemPoweroff, self).__init__()
+		super(PoweroffSystem, self).__init__()
 		self.arg = arg
 		
-class SystemSleep(object):
-	"""docstring for SystemSleep"""
+class SleepSystem(object):
 	def __init__(self, arg):
-		super(SystemSleep, self).__init__()
+		super(SleepSystem, self).__init__()
 		self.arg = arg
 		
 class BlinkLED(object):
-	"""docstring for LedBlink"""
 	def __init__(self, pin_type, output_pin):
-		super(LedBlink, self).__init__()
+		super(BlinkLED, self).__init__()
 		self.__pin_type = pin_type
 		self.__output_pin = output_pin
 
