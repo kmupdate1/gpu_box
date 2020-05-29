@@ -6,7 +6,7 @@ import Jetson.GPIO as GPIO
 #from user_event import detect_click as listener
 #from user_event import controll_sys as action
 
-from user_event.event_listener import EventNotify
+from user_event.event_listener import *
 from user_event.event_handler import *
 from user_event.event_behavior import *
 
@@ -18,6 +18,10 @@ pin_types = {
 click = {
 	'1' : True,
 	'2' : False,
+}
+
+listeners = {
+	'gpio' : EventNotify(),
 }
 
 handlers = {

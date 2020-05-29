@@ -1,17 +1,27 @@
+import subprocess
 import time
 
 import Jetson.GPIO as GPIO
 
 
 class PoweroffSystem(object):
-	def __init__(self, arg):
+	def __init__(self):
 		super(PoweroffSystem, self).__init__()
-		self.arg = arg
+
+	def behave(self):
+		#poweroff
+		subprocess.call('poweroff')
+		exit()
 		
 class SleepSystem(object):
-	def __init__(self, arg):
+	def __init__(self):
 		super(SleepSystem, self).__init__()
-		self.arg = arg
+
+	def behave(self):
+		#sleep
+		subprocess.call('systemctl suspend')
+#		sleepのときはアプリケーション終了するのか？特定のオブジェクトだけkillするとか？
+#		exit()
 		
 class BlinkLED(object):
 	def __init__(self, pin_type, output_pin):
@@ -30,7 +40,7 @@ class BlinkLED(object):
 		finally:
 			GPIO.cleanup()
 
-	def call_back(self):
+	def behave(self):
 		self.__blink()
 
 	def behave_sample(self, message, clicked_time):
