@@ -1,0 +1,21 @@
+#!/bin/sh
+
+echo "入力のトリガーを設定します．"
+
+
+function input_trigger() {
+	echo -n "GPIO, ???, !!! : "
+	read trigger
+}
+
+function gpio() {
+	echo -n "bcm, board : "
+	read type
+	echo -n "番号 : "
+	read number
+	echo
+}
+
+function output_type() {
+	echo ""
+}

@@ -1,0 +1,38 @@
+{
+	"input" : [
+		{
+			"GPIO" : ["BOARD", 200]
+		},
+		{
+			"output" : [
+				{
+					"single" : "sleep"
+				},
+				{
+					"multiple" : ["poweroff", 2]
+				}
+			]
+		}
+	],
+
+	"input" : [
+		{
+			"GPIO" : ["BOARD", 150]
+		},
+		{
+			"output" : [
+				{
+					"multiple" : ""
+				}
+			]
+		}
+	],
+	"input" : [
+		{
+			"!!!" : []
+		},
+		{
+			"output" : []
+		}
+	]
+}
